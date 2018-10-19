@@ -32,14 +32,21 @@ function drawButton() {
 
 function mousePressed() {
   var shouldIncreaseScore = isMouseInButton()
+  console.log("mouseIsButton")
   if (shouldIncreaseScore) {
     score = score + 1
+    console.log("mouseIsPressed")
   }
 }
 
 function isMouseInButton() {
-  var isInHorizontalRange = mousex < 100 && mouseX < 300
-  var isInVerticalRange = mouseY < 250 && mouseY < 320
+  var isInHorizontalRange = mouseX > 100 && mouseX < 300
+  var isInVerticalRange = mouseY > 250 && mouseY < 320
 
-  isInHorizontalRange && isInVerticalRange
+ return isInHorizontalRange && isInVerticalRange
 }
+// needed to added a return 
+// needed to change the signs round,
+// use console.log 
+// use sources and breakpoint
+// return means reutrn a answer when given a fuction
